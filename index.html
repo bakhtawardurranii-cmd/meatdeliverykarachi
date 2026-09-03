@@ -3,708 +3,95 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- TEMPORARY: keep this development site out of search engines -->
-  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <!-- TEMPORARY: site is being finalized — blocked from all search engines and AI crawlers/bots -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="GPTBot" content="noindex, nofollow">
+  <meta name="ChatGPT-User" content="noindex, nofollow">
+  <meta name="Google-Extended" content="noindex, nofollow">
+  <meta name="CCBot" content="noindex, nofollow">
+  <meta name="anthropic-ai" content="noindex, nofollow">
+  <meta name="ClaudeBot" content="noindex, nofollow">
+  <meta name="PerplexityBot" content="noindex, nofollow">
+  <meta name="applebot" content="noindex, nofollow">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meat Delivery Karachi — fresh, halal and hygienically packed meat delivered across Karachi. Website currently under construction.">
-  <title>Meat Delivery Karachi | Website Under Construction</title>
 
-  <style>
-    :root {
-      --red: #c90000;
-      --red-dark: #970000;
-      --black: #111111;
-      --dark: #181818;
-      --white: #ffffff;
-      --light: #f7f7f7;
-      --border: #e5e5e5;
-      --gold: #f0c45c;
-      --text: #222;
-      --muted: #777;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.5;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .topbar {
-      background: var(--red);
-      color: white;
-      font-size: 13px;
-    }
-
-    .topbar-inner {
-      max-width: var(--max);
-      margin: auto;
-      min-height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 8px 20px;
-    }
-
-    .topbar-left, .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .topbar a:hover { text-decoration: underline; }
-
-    .header {
-      background: white;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .header-inner {
-      max-width: var(--max);
-      margin: auto;
-      min-height: 112px;
-      display: grid;
-      grid-template-columns: 260px 1fr 260px;
-      align-items: center;
-      gap: 25px;
-      padding: 15px 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-mark {
-      width: 62px;
-      height: 62px;
-      border: 4px solid var(--red);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: var(--red);
-      font-size: 32px;
-      font-weight: 900;
-    }
-
-    .logo-text strong {
-      display: block;
-      font-size: 24px;
-      line-height: 1;
-      letter-spacing: .5px;
-    }
-
-    .logo-text strong span { color: var(--red); }
-
-    .logo-text small {
-      display: block;
-      margin-top: 6px;
-      color: #666;
-      font-size: 10px;
-      letter-spacing: 1.4px;
-      font-weight: 700;
-    }
-
-    .search {
-      display: flex;
-      height: 48px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .search input {
-      flex: 1;
-      border: 0;
-      outline: 0;
-      padding: 0 16px;
-      font-size: 14px;
-    }
-
-    .search button {
-      width: 58px;
-      border: 0;
-      background: var(--red);
-      color: white;
-      font-size: 21px;
-      cursor: pointer;
-    }
-
-    .call-box {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 12px;
-    }
-
-    .call-icon {
-      color: var(--red);
-      font-size: 30px;
-    }
-
-    .call-box strong { display: block; }
-    .call-box small { color: #777; }
-
-    .nav {
-      background: var(--black);
-      color: white;
-    }
-
-    .nav-inner {
-      max-width: var(--max);
-      margin: auto;
-      display: flex;
-      overflow-x: auto;
-    }
-
-    .nav a {
-      white-space: nowrap;
-      padding: 16px 19px;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      background: var(--red);
-    }
-
-    .construction {
-      background: #fff4d8;
-      border-bottom: 1px solid #e8cf8c;
-      color: #6d5200;
-      text-align: center;
-      padding: 12px 20px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .hero {
-      max-width: var(--max);
-      margin: 25px auto 0;
-      padding: 0 20px;
-    }
-
-    .hero-card {
-      min-height: 405px;
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(circle at 82% 45%, rgba(255,255,255,.10), transparent 28%),
-        linear-gradient(120deg, #330000, #850000 48%, #c40000);
-      color: white;
-      box-shadow: 0 10px 35px rgba(0,0,0,.15);
-    }
-
-    .hero-content {
-      width: 58%;
-      padding: 50px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-weight: 800;
-      letter-spacing: 2px;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.02;
-      text-transform: uppercase;
-      margin-bottom: 17px;
-    }
-
-    .hero h1 span { color: var(--gold); }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 25px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 4px;
-      font-weight: 800;
-      font-size: 13px;
-      text-transform: uppercase;
-      border: 0;
-      cursor: pointer;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #201900;
-    }
-
-    .btn-white {
-      background: white;
-      color: var(--red);
-    }
-
-    .meat-art {
-      position: absolute;
-      right: 3%;
-      bottom: 5%;
-      width: 40%;
-      height: 80%;
-      display: grid;
-      place-items: center;
-    }
-
-    .tray {
-      width: 78%;
-      height: 68%;
-      background: linear-gradient(145deg, #111, #333);
-      border-radius: 18px;
-      transform: rotate(-7deg);
-      box-shadow: 0 20px 30px rgba(0,0,0,.35);
-      display: grid;
-      place-items: center;
-      border: 5px solid rgba(255,255,255,.12);
-    }
-
-    .meat-pieces {
-      width: 86%;
-      height: 78%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      transform: rotate(2deg);
-    }
-
-    .piece {
-      border-radius: 12px;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,.20), transparent 25%),
-        linear-gradient(145deg, #a82d2d, #5d0808);
-      box-shadow: inset 0 0 10px rgba(0,0,0,.28);
-    }
-
-    .features {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 20px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .feature {
-      text-align: center;
-      padding: 15px;
-      border-right: 1px solid var(--border);
-    }
-
-    .feature:last-child { border-right: 0; }
-
-    .feature-icon {
-      color: var(--red);
-      font-size: 30px;
-      margin-bottom: 7px;
-    }
-
-    .feature strong {
-      display: block;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    .feature span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .section {
-      max-width: var(--max);
-      margin: auto;
-      padding: 55px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-title h2 {
-      font-size: 31px;
-      text-transform: uppercase;
-    }
-
-    .section-title .line {
-      width: 55px;
-      height: 3px;
-      background: var(--red);
-      margin: 10px auto 0;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .product {
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      overflow: hidden;
-      background: white;
-      transition: .2s ease;
-    }
-
-    .product:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    }
-
-    .product-image {
-      height: 225px;
-      background: #f4f4f4;
-      display: grid;
-      place-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-image .meat {
-      width: 62%;
-      height: 62%;
-      border-radius: 12px;
-      background: linear-gradient(145deg, #b93a3a, #671010);
-      box-shadow: 0 15px 25px rgba(0,0,0,.2);
-      transform: rotate(-4deg);
-    }
-
-    .product:nth-child(2) .meat {
-      border-radius: 50%;
-      width: 52%;
-      height: 52%;
-      transform: rotate(4deg);
-    }
-
-    .product:nth-child(3) .meat {
-      background: linear-gradient(145deg, #f4b1a8, #b95e56);
-    }
-
-    .product:nth-child(4) .meat {
-      width: 70%;
-      height: 55%;
-    }
-
-    .product:nth-child(5) .meat {
-      background: linear-gradient(145deg, #f0a79c, #bd5b55);
-    }
-
-    .product-info {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .product-info h3 {
-      font-size: 15px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .product-info p {
-      color: #777;
-      font-size: 12px;
-      min-height: 38px;
-    }
-
-    .price {
-      display: block;
-      margin: 9px 0 13px;
-      font-size: 18px;
-      font-weight: 800;
-    }
-
-    .product .btn {
-      background: var(--red);
-      color: white;
-      width: 120px;
-    }
-
-    .coming {
-      margin-top: 20px;
-      padding: 16px;
-      text-align: center;
-      background: #f9f9f9;
-      border-left: 4px solid var(--red);
-      font-size: 13px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .info-card {
-      padding: 30px;
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 7px;
-    }
-
-    .info-card h3 {
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      font-size: 18px;
-    }
-
-    .info-card p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    .location-card a {
-      display: inline-block;
-      margin-top: 15px;
-      color: var(--red);
-      font-weight: 800;
-    }
-
-    .newsletter {
-      background: var(--red);
-      color: white;
-      padding: 42px 20px;
-    }
-
-    .newsletter-inner {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .newsletter h2 {
-      font-size: 27px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .newsletter p {
-      margin-bottom: 18px;
-      opacity: .9;
-    }
-
-    .newsletter-form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      background: white;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 14px;
-      border: 0;
-      outline: 0;
-    }
-
-    .newsletter-form button {
-      border: 0;
-      background: var(--black);
-      color: white;
-      padding: 0 22px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    footer {
-      background: var(--dark);
-      color: #ddd;
-    }
-
-    .footer-inner {
-      max-width: var(--max);
-      margin: auto;
-      padding: 45px 20px 25px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
-      gap: 35px;
-    }
-
-    footer h3 {
-      color: white;
-      text-transform: uppercase;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    footer li {
-      list-style: none;
-      margin: 8px 0;
-      font-size: 13px;
-    }
-
-    footer li a:hover { color: white; }
-
-    .footer-bottom {
-      border-top: 1px solid #333;
-      padding: 17px 20px;
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: #25D366;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 31px;
-      font-weight: 900;
-      box-shadow: 0 5px 20px rgba(0,0,0,.25);
-      z-index: 9999;
-      border: 3px solid white;
-    }
-
-    .whatsapp:hover { transform: scale(1.06); }
-
-    .whatsapp-label {
-      position: fixed;
-      right: 94px;
-      bottom: 34px;
-      background: white;
-      color: #222;
-      padding: 9px 13px;
-      border-radius: 5px;
-      font-size: 12px;
-      font-weight: 700;
-      box-shadow: 0 3px 14px rgba(0,0,0,.15);
-      z-index: 9998;
-    }
-
-    .notice {
-      position: fixed;
-      left: 20px;
-      bottom: 20px;
-      background: rgba(17,17,17,.94);
-      color: white;
-      padding: 12px 15px;
-      border-radius: 5px;
-      font-size: 11px;
-      z-index: 9998;
-    }
-
-    @media (max-width: 900px) {
-      .header-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .logo, .call-box { justify-content: center; }
-      .hero-content { width: 70%; padding: 35px; }
-      .meat-art { width: 42%; opacity: .75; }
-      .features { grid-template-columns: repeat(2, 1fr); }
-      .feature:nth-child(2) { border-right: 0; }
-      .products { grid-template-columns: repeat(2, 1fr); }
-      .footer-inner { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-      .topbar-inner, .topbar-left, .topbar-right {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .topbar-right { display: none; }
-
-      .hero { padding: 0 12px; }
-      .hero-card { min-height: 500px; }
-      .hero-content { width: 100%; padding: 30px 25px; }
-      .meat-art { width: 100%; height: 45%; right: -20%; bottom: -3%; opacity: .5; }
-
-      .features, .products, .info-grid, .footer-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .feature {
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .feature:last-child { border-bottom: 0; }
-      .section { padding: 40px 15px; }
-      .whatsapp-label, .notice { display: none; }
-      .newsletter-form { flex-direction: column; }
-      .newsletter-form button { padding: 14px; }
-    }
-  </style>
+  <!-- PRIMARY SEO META (kept ready for when noindex is removed at launch) -->
+  <title>Meat Delivery Karachi | Fresh Meat Delivery Near You — Chicken, Beef &amp; Mutton</title>
+  <meta name="description" content="Order fresh meat online in Karachi. Meat Delivery Karachi delivers fresh chicken, beef and mutton to your door — fast, hygienic, halal meat home delivery near you.">
+  <meta name="keywords" content="meat delivery Karachi, meat delivery near me, fresh meat delivery Karachi, fresh meat delivery near me, meat home delivery Karachi, online meat delivery Karachi, order meat online Karachi, buy meat online Karachi, fresh meat online Karachi, meat shop online Karachi, chicken shop near me, order beef online, order chicken online, meat shop near me">
+  <meta name="author" content="Meat Delivery Karachi">
+  <link rel="canonical" href="https://meatdeliverykarachi.com">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+  <!-- OPEN GRAPH / SOCIAL -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Meat Delivery Karachi">
+  <meta property="og:title" content="Meat Delivery Karachi | Fresh Meat Delivery Near You">
+  <meta property="og:description" content="Order fresh chicken, beef and mutton online in Karachi. Fast, hygienic meat home delivery near you — order on call or WhatsApp.">
+  <meta property="og:image" content="https://meatdeliverykarachi.com/logo.png">
+  <meta property="og:url" content="https://meatdeliverykarachi.com">
+  <meta property="og:locale" content="en_PK">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meat Delivery Karachi | Fresh Meat Delivery Near You">
+  <meta name="twitter:description" content="Order fresh chicken, beef and mutton online in Karachi. Fast, hygienic meat home delivery near you.">
+  <meta name="twitter:image" content="https://meatdeliverykarachi.com/logo.png">
+
+  <!-- LOCAL BUSINESS STRUCTURED DATA (ready for launch) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Meat Delivery Karachi",
+    "image": "https://meatdeliverykarachi.com/logo.png",
+    "url": "https://meatdeliverykarachi.com",
+    "telephone": "+923152115755",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "K, 30 KA Garden, Rafi Garden, Rafi Bungalows, Muslimabad",
+      "addressLocality": "Malir City, Shah Faisal Town",
+      "postalCode": "75600",
+      "addressRegion": "Sindh",
+      "addressCountry": "PK"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Karachi"
+    },
+    "servesCuisine": "Meat, Halal",
+    "openingHours": "Mo-Su 07:00-23:00"
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
-  <!-- TOP CONTACT BAR -->
-  <div class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-left">
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="https://wa.me/923152115755" target="_blank" rel="noopener">WhatsApp</a>
-        <span>|</span>
-        <a href="tel:+923152115755">Contact Us</a>
-      </div>
-
-      <div class="topbar-right">
-        <a href="tel:+923152115755">☎ 0315 2115755</a>
-        <span>|</span>
-        <span>7:00 AM – 11:00 PM</span>
-      </div>
-    </div>
-  </div>
-
+  
   <!-- HEADER — LOGIN / REGISTER / MY ACCOUNT REMOVED -->
   <header class="header">
     <div class="header-inner">
-      <a href="#" class="logo" aria-label="Meat Delivery Karachi Home">
-        <div class="logo-mark">🐄</div>
-        <div class="logo-text">
-          <strong>MEAT DELIVERY <span>KARACHI</span></strong>
-          <small>FRESH MEAT. FAST DELIVERY.</small>
-        </div>
+      <a href="index.html" class="logo" aria-label="Meat Delivery Karachi — fresh meat home delivery">
+        <img src="logo-header.png" alt="Meat Delivery Karachi logo — fresh meat delivery service in Karachi" class="logo-img">
       </a>
 
-      <form class="search" onsubmit="return false;">
-        <input type="search" placeholder="Search for products..." aria-label="Search products">
-        <button type="submit" aria-label="Search">⌕</button>
-      </form>
+      <div class="header-badges">
+        <span class="header-badge"><span class="icon">✓</span> 100% Fresh</span>
+        <span class="header-badge"><span class="icon">☾</span> Halal Certified</span>
+        <span class="header-badge"><span class="icon">🚚</span> Karachi-Wide Delivery</span>
+      </div>
 
       <div class="call-box">
         <div class="call-icon">☎</div>
@@ -719,17 +106,13 @@
   <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
-      <a class="active" href="#">Home</a>
-      <a href="#chicken">Chicken</a>
-      <a href="#beef">Beef</a>
-      <a href="#mutton">Mutton</a>
-      <a href="#seafood">Seafood</a>
-      <a href="#ready">Ready to Cook</a>
-      <a href="#combos">Combos &amp; Boxes</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#our-story">Our Story</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="chicken.html">Chicken</a>
+      <a href="beef.html">Beef</a>
+      <a href="mutton.html">Mutton</a>
+      <a href="locations.html">Locations</a>
+      <a href="meat-guide.html">Meat Guide</a>
+      <a href="wholesale-meat-karachi.html">Wholesale</a>
     </div>
   </nav>
 
@@ -745,24 +128,14 @@
       <div class="hero-card">
         <div class="hero-content">
           <div class="eyebrow">FRESH • HALAL • HYGIENIC</div>
-          <h1>Fresh Meat<br>Delivered <span>in Karachi</span></h1>
-          <p>Fresh chicken, beef and mutton prepared for your home. Our full online ordering experience is coming soon.</p>
+          <h1>Fresh Meat Delivery <span>Near You in Karachi</span></h1>
+          <p>Order fresh chicken, beef and mutton online for home delivery anywhere in Karachi. Hygienically packed, halal meat — your local meat shop near me, delivered fast.</p>
 
           <div class="hero-buttons">
             <a class="btn btn-gold" href="https://wa.me/923152115755?text=Hello%20Meat%20Delivery%20Karachi%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">
               Order on WhatsApp
             </a>
             <a class="btn btn-white" href="tel:+923152115755">Call 0315 2115755</a>
-          </div>
-        </div>
-
-        <div class="meat-art" aria-hidden="true">
-          <div class="tray">
-            <div class="meat-pieces">
-              <div class="piece"></div><div class="piece"></div><div class="piece"></div>
-              <div class="piece"></div><div class="piece"></div><div class="piece"></div>
-              <div class="piece"></div><div class="piece"></div><div class="piece"></div>
-            </div>
           </div>
         </div>
       </div>
@@ -795,70 +168,62 @@
     <!-- PRODUCTS -->
     <section class="section" id="products">
       <div class="section-title">
-        <h2>Popular Products</h2>
+        <h2>Order Meat Online in Karachi</h2>
         <div class="line"></div>
+        <p style="max-width:700px;margin:14px auto 0;text-align:center;color:var(--muted);font-size:14px;">
+          Buy meat online in Karachi — fresh chicken, beef and mutton from your trusted local meat shop online, delivered to your doorstep.
+        </p>
       </div>
 
       <div class="products">
         <article class="product" id="beef">
-          <div class="product-image"><div class="meat"></div></div>
+          <div class="product-image">
+            <img class="product-photo" src="images/beef.jpg" alt="Fresh beef meat cuts for online order in Karachi" loading="lazy" onerror="this.style.display='none'">
+            <div class="meat" role="img" aria-label="Fresh beef cuts available for online order in Karachi"></div>
+          </div>
           <div class="product-info">
-            <h3>Fresh Beef</h3>
-            <p>Fresh beef cuts prepared according to your requirements.</p>
-            <span class="price">Price Coming Soon</span>
+            <h3>Order Beef Online</h3>
+            <p>Fresh beef cuts, cleaned and prepared to your requirement — order beef online for Karachi delivery.</p>
+            <span class="price">Contact on WhatsApp for price and order</span>
             <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20order%20fresh%20beef." target="_blank" rel="noopener">WhatsApp</a>
+            <div style="margin-top:10px;font-size:12px;">
+              <a href="beef.html" style="color:var(--red-dark);font-weight:700;">All Beef Cuts →</a>
+            </div>
           </div>
         </article>
 
         <article class="product" id="mutton">
-          <div class="product-image"><div class="meat"></div></div>
+          <div class="product-image">
+            <img class="product-photo" src="images/mutton.jpg" alt="Fresh mutton meat cuts for online order in Karachi" loading="lazy" onerror="this.style.display='none'">
+            <div class="meat" role="img" aria-label="Fresh mutton cuts available for online order in Karachi"></div>
+          </div>
           <div class="product-info">
-            <h3>Fresh Mutton</h3>
-            <p>Fresh mutton cuts for biryani, karahi, qorma and more.</p>
-            <span class="price">Price Coming Soon</span>
+            <h3>Fresh Mutton Delivery</h3>
+            <p>Fresh mutton cuts for biryani, karahi and qorma — home delivered fresh across Karachi.</p>
+            <span class="price">Contact on WhatsApp for price and order</span>
             <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20order%20fresh%20mutton." target="_blank" rel="noopener">WhatsApp</a>
+            <div style="margin-top:10px;font-size:12px;">
+              <a href="mutton.html" style="color:var(--red-dark);font-weight:700;">All Mutton Cuts →</a>
+            </div>
           </div>
         </article>
 
         <article class="product" id="chicken">
-          <div class="product-image"><div class="meat"></div></div>
+          <div class="product-image">
+            <img class="product-photo" src="images/chicken.jpg" alt="Fresh chicken meat cuts for online order in Karachi" loading="lazy" onerror="this.style.display='none'">
+            <div class="meat" role="img" aria-label="Fresh chicken cuts available for online order in Karachi"></div>
+          </div>
           <div class="product-info">
-            <h3>Fresh Chicken</h3>
-            <p>Fresh chicken prepared in popular cuts and portions.</p>
-            <span class="price">Price Coming Soon</span>
+            <h3>Order Chicken Online</h3>
+            <p>Fresh chicken in popular cuts and portions — your nearby chicken shop, now delivering across Karachi.</p>
+            <span class="price">Contact on WhatsApp for price and order</span>
             <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20order%20fresh%20chicken." target="_blank" rel="noopener">WhatsApp</a>
+            <div style="margin-top:10px;font-size:12px;">
+              <a href="chicken.html" style="color:var(--red-dark);font-weight:700;">All Chicken Cuts →</a>
+            </div>
           </div>
         </article>
 
-        <article class="product" id="seafood">
-          <div class="product-image"><div class="meat"></div></div>
-          <div class="product-info">
-            <h3>Seafood</h3>
-            <p>Seafood category — products and availability will be added here.</p>
-            <span class="price">Coming Soon</span>
-            <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20ask%20about%20seafood." target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </article>
-
-        <article class="product" id="ready">
-          <div class="product-image"><div class="meat"></div></div>
-          <div class="product-info">
-            <h3>Ready to Cook</h3>
-            <p>Ready-to-cook products and marinated options will be listed here.</p>
-            <span class="price">Coming Soon</span>
-            <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20ask%20about%20ready-to-cook%20products." target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </article>
-
-        <article class="product" id="combos">
-          <div class="product-image"><div class="meat"></div></div>
-          <div class="product-info">
-            <h3>Combos &amp; Boxes</h3>
-            <p>Family packs, protein boxes and special meat combos.</p>
-            <span class="price">Coming Soon</span>
-            <a class="btn" href="https://wa.me/923152115755?text=I%20want%20to%20ask%20about%20combos%20and%20meat%20boxes." target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </article>
       </div>
 
       <div class="coming">
@@ -906,8 +271,9 @@
           <h3>Our Story</h3>
           <p>
             We are building a Karachi-focused fresh meat delivery service with a simple goal:
-            make ordering quality meat easier, clearer and more convenient.
-            This website is currently under construction while our products, pricing and ordering system are being finalized.
+            make ordering fresh meat online easier, clearer and more convenient — whether you're searching
+            for a meat shop near me or fresh meat delivery near me. This website is currently under
+            construction while our products, pricing and ordering system are being finalized.
           </p>
         </div>
 
@@ -925,7 +291,84 @@
           </a>
         </div>
       </div>
+
+      <div class="info-card" style="margin-top:25px;">
+        <h3>Areas We Deliver Fresh Meat To</h3>
+        <p>
+          Meat Delivery Karachi serves Malir, Shah Faisal Town, Gulshan-e-Iqbal, Gulistan-e-Jauhar,
+          North Nazimabad, PECHS, DHA, Clifton, Korangi and surrounding neighborhoods — search
+          "meat delivery near me" and we'll confirm if your area is covered.
+        </p>
+      </div>
     </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Do you deliver fresh meat near me in Karachi?</h3>
+          <p>Yes — we offer meat home delivery across Karachi, including Malir, Shah Faisal Town, Gulshan-e-Iqbal and nearby areas. Message us your location on WhatsApp to confirm delivery.</p>
+        </div>
+        <div class="info-card">
+          <h3>How do I order meat online in Karachi?</h3>
+          <p>Simply call or WhatsApp us at 0315 2115755 with your order — chicken, beef or mutton — and we'll confirm price, cuts and delivery time. Full online checkout is coming soon.</p>
+        </div>
+        <div class="info-card">
+          <h3>Is the meat fresh and halal?</h3>
+          <p>Yes, all meat is fresh, halal and hygienically packed before delivery to your door.</p>
+        </div>
+        <div class="info-card">
+          <h3>What are your delivery hours?</h3>
+          <p>We're available for orders daily from 7:00 AM to 11:00 PM.</p>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you deliver fresh meat near me in Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — we offer meat home delivery across Karachi, including Malir, Shah Faisal Town, Gulshan-e-Iqbal and nearby areas. Message us your location on WhatsApp to confirm delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I order meat online in Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call or WhatsApp 0315 2115755 with your order — chicken, beef or mutton — and we will confirm price, cuts and delivery time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the meat fresh and halal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all meat is fresh, halal and hygienically packed before delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your delivery hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are available for orders daily from 7:00 AM to 11:00 PM."
+          }
+        }
+      ]
+    }
+    </script>
 
     <!-- NEWSLETTER -->
     <section class="newsletter" id="blog">
@@ -942,27 +385,56 @@
 
   <!-- FOOTER -->
   <footer>
+    <!-- SOCIAL / CONTACT STRIP -->
+    <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="https://wa.me/923152115755" target="_blank" rel="noopener">WhatsApp</a>
+        <span>|</span>
+        <a href="tel:+923152115755">Contact Us</a>
+      </div>
+
+      <div class="topbar-right">
+        <a href="tel:+923152115755">☎ 0315 2115755</a>
+        <span>|</span>
+        <span>7:00 AM – 11:00 PM</span>
+      </div>
+    </div>
+  </div>
+
     <div class="footer-inner">
       <div>
         <h3>Meat Delivery Karachi</h3>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#our-story">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact Us</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#products">Products</a></li>
+          <li><a href="wholesale-meat-karachi.html">Wholesale Meat</a></li>
+          <li><a href="meat-guide.html">Meat Guide</a></li>
         </ul>
       </div>
 
       <div>
         <h3>Categories</h3>
         <ul>
-          <li><a href="#chicken">Chicken</a></li>
-          <li><a href="#beef">Beef</a></li>
-          <li><a href="#mutton">Mutton</a></li>
-          <li><a href="#seafood">Seafood</a></li>
-          <li><a href="#ready">Ready to Cook</a></li>
-          <li><a href="#combos">Combos &amp; Boxes</a></li>
+          <li><a href="chicken.html">Chicken</a></li>
+          <li><a href="beef.html">Beef</a></li>
+          <li><a href="mutton.html">Mutton</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Areas We Deliver</h3>
+        <ul>
+          <li><a href="dha.html">DHA</a></li>
+          <li><a href="clifton.html">Clifton</a></li>
+          <li><a href="gulshan.html">Gulshan-e-Iqbal</a></li>
+          <li><a href="johar.html">Gulistan-e-Jauhar</a></li>
+          <li><a href="locations.html">All Areas →</a></li>
         </ul>
       </div>
 
@@ -974,14 +446,7 @@
           <li><a href="#contact">Karachi Location</a></li>
           <li>7:00 AM – 11:00 PM</li>
         </ul>
-      </div>
-
-      <div>
-        <h3>Stay Connected</h3>
-        <p style="font-size:13px;color:#aaa;margin-bottom:15px;">
-          Online ordering is coming soon. Contact us directly for current availability and prices.
-        </p>
-        <a class="btn btn-gold" href="https://wa.me/923152115755?text=Hello%20Meat%20Delivery%20Karachi" target="_blank" rel="noopener">
+        <a class="btn btn-gold" href="https://wa.me/923152115755?text=Hello%20Meat%20Delivery%20Karachi" target="_blank" rel="noopener" style="margin-top:15px;display:inline-block;">
           WhatsApp Us
         </a>
       </div>
@@ -1005,7 +470,7 @@
 
   <!-- DEVELOPMENT NOTICE -->
   <div class="notice">
-    Development version • Search engines blocked with noindex/nofollow
+    Development version • Search engines &amp; AI crawlers blocked with noindex/nofollow
   </div>
 
   <script>
