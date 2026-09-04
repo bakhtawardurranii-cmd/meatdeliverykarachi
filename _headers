@@ -1,0 +1,30 @@
+# Caching policy for this site.
+#
+# NOTE: This file has NO effect on plain GitHub Pages — GitHub Pages serves
+# every file with a fixed Cache-Control it does not let you override, which
+# is why "efficient cache policy" shows up in Lighthouse regardless of what
+# you do in the repo. This file follows the Netlify / Cloudflare Pages
+# "_headers" format and takes effect automatically if this repo is ever
+# served through Cloudflare (free plan, DNS-only or proxied) or moved to
+# Netlify/Cloudflare Pages. Until then it's just documentation of intent.
+#
+# Filenames here are NOT content-hashed, so "immutable"/1-year caching is
+# deliberately avoided — that would delay how quickly visitors see a future
+# update to the same filename. 30 days is a reasonable middle ground; shrink
+# it further, or switch to hashed filenames + immutable caching, if you start
+# shipping frequent asset updates.
+
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600

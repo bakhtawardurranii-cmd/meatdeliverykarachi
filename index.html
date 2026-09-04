@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVGG1S15BF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CVGG1S15BF');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yczavbn3hq");
-  </script>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Hero/LCP image: preloaded with fetchpriority so the browser requests it
+       in the very first network round trip, before it even has to wait for
+       CSS to be parsed. One pair per breakpoint (matching assets/style.min.css)
+       + one pair per format, so each browser only downloads the single variant
+       it will actually use. Placed first in <head>, ahead of the stylesheet,
+       so the preload scanner discovers it immediately. -->
+  <link rel="preload" as="image" href="images/hero-meat-delivery-karachi-1600.avif" type="image/avif" media="(min-width: 601px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-meat-delivery-karachi-1600.webp" type="image/webp" media="(min-width: 601px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-meat-delivery-karachi-900.avif" type="image/avif" media="(max-width: 600px)" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-meat-delivery-karachi-900.webp" type="image/webp" media="(max-width: 600px)" fetchpriority="high">
+
+  <!-- Render-blocking stylesheet moved up so CSSOM construction (needed
+       before the hero background-image can even be painted) starts as early
+       as possible, instead of waiting behind favicons/meta/schema below. -->
+  <link rel="stylesheet" href="assets/style.min.css">
+
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- PRIMARY SEO META -->
   <title>Meat Delivery Karachi | Fresh Chicken, Beef &amp; Mutton Online</title>
@@ -31,7 +29,6 @@
   <meta name="keywords" content="online fresh beef and chicken meat delivery Karachi, fresh meat delivery Karachi, online meat delivery Karachi, order fresh online Karachi, meat delivery Karachi, buy meat online Karachi">
   <meta name="author" content="Meat Delivery Karachi">
   <link rel="canonical" href="https://meatdeliverykarachi.com">
-  <link rel="preload" as="image" href="images/hero-meat-delivery-karachi.webp">
 
   <!-- FAVICON -->
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -114,8 +111,6 @@
     "url": "https://meatdeliverykarachi.com"
   }
   </script>
-
-  <link rel="stylesheet" href="assets/style.min.css">
 </head>
 
 <body>
@@ -596,6 +591,47 @@
       event.target.reset();
       return false;
     }
+  </script>
+
+  <!-- Google tag (gtag.js) + Microsoft Clarity, deferred.
+       Same IDs, same calls as before — nothing removed. They previously sat
+       at the very top of <head> as render-blocking/early-connection-opening
+       scripts, which delayed discovery of the CSS and hero image (the LCP
+       resources) and competed with them for the limited number of parallel
+       connections on a throttled mobile connection. Loading them once the
+       browser is idle (or shortly after window 'load' as a fallback for
+       browsers without requestIdleCallback) keeps tracking intact while
+       keeping them off the critical rendering path and off the main thread
+       during LCP. -->
+  <script>
+    (function () {
+      function loadAnalytics() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-CVGG1S15BF');
+
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-CVGG1S15BF';
+        document.head.appendChild(gaScript);
+
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yczavbn3hq");
+      }
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadAnalytics, { timeout: 4000 });
+      } else {
+        window.addEventListener('load', function () {
+          setTimeout(loadAnalytics, 1500);
+        });
+      }
+    })();
   </script>
 
 </body>
