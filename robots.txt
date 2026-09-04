@@ -1,12 +1,6 @@
 # Meat Delivery Karachi — robots.txt
-# STATUS: Site is still being finalized (pricing, product photos, checkout).
-# All crawlers are currently disallowed. Flip this file when ready to launch.
 
 User-agent: *
-Disallow: /
+Allow: /
 
-# --- When ready to go live, replace the block above with: ---
-# User-agent: *
-# Allow: /
-#
-# Sitemap: https://meatdeliverykarachi.com/sitemap.xml
+Sitemap: https://meatdeliverykarachi.com/sitemap.xml
