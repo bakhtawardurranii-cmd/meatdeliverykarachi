@@ -157,9 +157,16 @@
       position: relative;
       display: flex;
       align-items: center;
+      /* Fallback for browsers without image-set() support */
       background-image:
         linear-gradient(90deg, rgba(8,0,0,.92) 0%, rgba(8,0,0,.68) 32%, rgba(8,0,0,.28) 58%, rgba(8,0,0,0) 80%),
-        url('../images/hero-meat-delivery-karachi.webp');
+        url('../images/hero-meat-delivery-karachi-1600.webp');
+      background-image:
+        linear-gradient(90deg, rgba(8,0,0,.92) 0%, rgba(8,0,0,.68) 32%, rgba(8,0,0,.28) 58%, rgba(8,0,0,0) 80%),
+        image-set(
+          url('../images/hero-meat-delivery-karachi-1600.avif') type('image/avif'),
+          url('../images/hero-meat-delivery-karachi-1600.webp') type('image/webp')
+        );
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -554,7 +561,13 @@
         background-position: 68% center;
         background-image:
           linear-gradient(90deg, rgba(8,0,0,.94) 0%, rgba(8,0,0,.75) 45%, rgba(8,0,0,.35) 70%, rgba(8,0,0,.05) 90%),
-          url('../images/hero-meat-delivery-karachi.webp');
+          url('../images/hero-meat-delivery-karachi-1600.webp');
+        background-image:
+          linear-gradient(90deg, rgba(8,0,0,.94) 0%, rgba(8,0,0,.75) 45%, rgba(8,0,0,.35) 70%, rgba(8,0,0,.05) 90%),
+          image-set(
+            url('../images/hero-meat-delivery-karachi-1600.avif') type('image/avif'),
+            url('../images/hero-meat-delivery-karachi-1600.webp') type('image/webp')
+          );
       }
       .features { grid-template-columns: repeat(2, 1fr); }
       .feature:nth-child(2) { border-right: 0; }
@@ -577,7 +590,13 @@
         background-position: 78% center;
         background-image:
           linear-gradient(180deg, rgba(8,0,0,.90) 0%, rgba(8,0,0,.55) 45%, rgba(8,0,0,.80) 100%),
-          url('../images/hero-meat-delivery-karachi.webp');
+          url('../images/hero-meat-delivery-karachi-900.webp');
+        background-image:
+          linear-gradient(180deg, rgba(8,0,0,.90) 0%, rgba(8,0,0,.55) 45%, rgba(8,0,0,.80) 100%),
+          image-set(
+            url('../images/hero-meat-delivery-karachi-900.avif') type('image/avif'),
+            url('../images/hero-meat-delivery-karachi-900.webp') type('image/webp')
+          );
       }
 
       .features, .products, .info-grid, .footer-inner {
