@@ -110,12 +110,69 @@
 }
   </script>
 
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
+  "@type": "Product",
+  "name": "Fresh Beef — Karachi Delivery",
+  "category": "Beef Cuts",
+  "brand": { "@type": "Brand", "name": "Meat Delivery Karachi" },
+  "description": "Zabiha Halal fresh beef, cut to order and delivered across Karachi. Available bone-in or boneless.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Beef (Bone-in)",
+      "priceCurrency": "PKR",
+      "price": "2099",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": "https://meatdeliverykarachi.com/beef.html",
+      "areaServed": { "@type": "City", "name": "Karachi" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": 1, "unitCode": "KGM" },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "PKR" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "PK", "addressRegion": "Sindh", "addressLocality": "Karachi" },
+        "description": "Free delivery across Karachi"
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Beef (Boneless)",
+      "priceCurrency": "PKR",
+      "price": "3099",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": "https://meatdeliverykarachi.com/beef.html",
+      "areaServed": { "@type": "City", "name": "Karachi" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": 1, "unitCode": "KGM" },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "PKR" },
+        "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "PK", "addressRegion": "Sindh", "addressLocality": "Karachi" },
+        "description": "Free delivery across Karachi"
+      }
+    }
+  ]
+}
+  </script>
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is your beef Zabiha Halal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All beef sold by Meat Delivery Karachi is Zabiha Halal — slaughtered according to Islamic requirements — then cleaned and hygienically packed before delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free delivery on beef orders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer free delivery all over Karachi on beef orders, with no minimum order amount."
+      }
+    },
     {
       "@type": "Question",
       "name": "How do I order beef online in Karachi?",
@@ -179,6 +236,7 @@
       <a href="locations.html">Locations</a>
       <a href="meat-guide.html">Meat Guide</a>
       <a href="wholesale-meat-karachi.html">Wholesale</a>
+      <a href="meat-subscription.html">Subscription</a>
       </div>
 
       <a class="nav-phone" href="tel:+923152115755">
@@ -215,7 +273,7 @@
             best to prepare it.
           </p>
           <p>
-            All beef is halal, cleaned and hygienically packed before dispatch, and weight is confirmed with you before your order is finalized.
+            All beef is <strong>Zabiha Halal</strong>, cleaned and hygienically packed before dispatch, and weight is confirmed with you before your order is finalized. We also offer <strong>free delivery all over Karachi</strong> on every beef order.
           </p>
         </div>
       </div>
@@ -229,7 +287,7 @@
         </div>
         <div class="info-card">
           <h3>Karachi Delivery Information</h3>
-          <p>Beef orders are delivered across Karachi, including North Nazimabad, all phases of DHA, Clifton, Korangi, Shah Faisal Town, all blocks of Gulshan-e-Iqbal, all blocks of Gulistan-e-Jauhar and PECHS. Delivery time depends on your location and order size — we confirm an estimated window with you on WhatsApp or by call before dispatch.</p>
+          <p>Beef orders are delivered <strong>free of charge all over Karachi</strong>, including North Nazimabad, all phases of DHA, Clifton, Korangi, Shah Faisal Town, all blocks of Gulshan-e-Iqbal, all blocks of Gulistan-e-Jauhar and PECHS. Delivery time depends on your location and order size — we confirm an estimated window with you on WhatsApp or by call before dispatch.</p>
         </div>
       </div>
     </section>
@@ -242,7 +300,7 @@
             <h3>Boneless Beef</h3>
             <span style="display:inline-block;background:#eaf7ea;color:#1a7a1a;font-size:10.5px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;">✓ In Stock</span>
             <p>Trimmed boneless beef cubes and chunks, ready for karahi, stew or slow-cooked curries.</p>
-            <span class="price" style="font-size:12px;">Contact on WhatsApp for price</span>
+            <span class="price" style="font-size:12px;">Rs. 3,099/kg &nbsp;•&nbsp; <span style="color:#1a7a2e;">Free Delivery</span></span>
             <span class="btn">View Cut →</span>
           </div>
         </a>
@@ -252,7 +310,7 @@
             <h3>Beef Qeema</h3>
             <span style="display:inline-block;background:#eaf7ea;color:#1a7a1a;font-size:10.5px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;">✓ In Stock</span>
             <p>Freshly minced beef qeema — ground fresh to order for kofta, qeema matar and samosa filling.</p>
-            <span class="price" style="font-size:12px;">Contact on WhatsApp for price</span>
+            <span class="price" style="font-size:12px;">Rs. 3,099/kg &nbsp;•&nbsp; <span style="color:#1a7a2e;">Free Delivery</span></span>
             <span class="btn">View Cut →</span>
           </div>
         </a>
@@ -262,7 +320,7 @@
             <h3>Beef Nihari Cut</h3>
             <span style="display:inline-block;background:#eaf7ea;color:#1a7a1a;font-size:10.5px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;">✓ In Stock</span>
             <p>Shank and connective-tissue-rich cuts selected specifically for slow-cooked nihari.</p>
-            <span class="price" style="font-size:12px;">Contact on WhatsApp for price</span>
+            <span class="price" style="font-size:12px;">Rs. 2,099/kg &nbsp;•&nbsp; <span style="color:#1a7a2e;">Free Delivery</span></span>
             <span class="btn">View Cut →</span>
           </div>
         </a>
@@ -272,7 +330,7 @@
             <h3>Beef Haleem Cut</h3>
             <span style="display:inline-block;background:#eaf7ea;color:#1a7a1a;font-size:10.5px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;">✓ In Stock</span>
             <p>Small, even beef pieces prepared for haleem, so the meat shreds properly during the long cook.</p>
-            <span class="price" style="font-size:12px;">Contact on WhatsApp for price</span>
+            <span class="price" style="font-size:12px;">Rs. 3,099/kg &nbsp;•&nbsp; <span style="color:#1a7a2e;">Free Delivery</span></span>
             <span class="btn">View Cut →</span>
           </div>
         </a>
@@ -282,7 +340,7 @@
             <h3>Beef BBQ Cuts</h3>
             <span style="display:inline-block;background:#eaf7ea;color:#1a7a1a;font-size:10.5px;font-weight:800;text-transform:uppercase;padding:3px 8px;border-radius:3px;margin-bottom:6px;">✓ In Stock</span>
             <p>Beef boti and seekh-ready cuts trimmed for barbecue — chapli kebab, boti and seekh kebab.</p>
-            <span class="price" style="font-size:12px;">Contact on WhatsApp for price</span>
+            <span class="price" style="font-size:12px;">Rs. 3,099/kg &nbsp;•&nbsp; <span style="color:#1a7a2e;">Free Delivery</span></span>
             <span class="btn">View Cut →</span>
           </div>
         </a>
@@ -294,6 +352,7 @@
         <a href="beef-cuts.html">Beef Cuts Guide</a>
         <a href="locations.html">Delivery Areas in Karachi</a>
         <a href="wholesale-meat-karachi.html">Wholesale Beef</a>
+        <a href="meat-subscription.html">Meat Subscription</a>
       </div>
     </div>
 
@@ -318,6 +377,14 @@
         <div class="line"></div>
       </div>
       <div class="info-grid">
+        <div class="info-card">
+          <h3>Is your beef Zabiha Halal?</h3>
+          <p>Yes. All beef is Zabiha Halal — slaughtered according to Islamic requirements — then cleaned and hygienically packed before delivery.</p>
+        </div>
+        <div class="info-card">
+          <h3>Do you offer free delivery on beef orders?</h3>
+          <p>Yes — free delivery all over Karachi on every beef order, with no minimum order amount.</p>
+        </div>
         <div class="info-card">
           <h3>How do I order beef online in Karachi?</h3>
           <p>Message us on WhatsApp or call 0315 2115755 with the cut and quantity you need. We'll confirm weight, price and delivery time before preparing your order.</p>
@@ -386,6 +453,7 @@
           <li><a href="chicken.html">Chicken</a></li>
           <li><a href="beef.html">Beef</a></li>
           <li><a href="mutton.html">Mutton</a></li>
+          <li><a href="meat-subscription.html">Meat Subscription</a></li>
         </ul>
       </div>
 
